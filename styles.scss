@@ -1,0 +1,288 @@
+@import 'typography';
+@import 'icons';
+
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+body {
+  font-size: 1em;
+}
+
+header {
+  background-color: $byui-blue;
+  color: $light-gray;
+  margin-bottom: 30px;
+}
+
+// Site banner styles
+.site-banner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  h1 {
+    display: none;
+  }
+
+  form {
+    display: none;
+  }
+}
+
+.icon-byui-logo,
+.mobile-header-icon {
+  color: $light-gray;
+  font-size: 2em;
+}
+
+.site-banner__left,
+.site-banner__right {
+  display: flex;
+
+  a {
+    text-decoration: none;
+
+  }
+}
+
+.site-banner__left {
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $body-font;
+  padding: 20px 20px 20px 15px;
+  width: 5.5em;
+}
+
+.site-banner__right {
+  justify-content: flex-end;
+
+  a {
+    padding: 0 5px;
+  }
+}
+
+.site-banner__bottom {
+  background-color: $light-gray;
+  color: $body-font;
+  text-align: right;
+  padding: 15px 20px;
+  font-size: 1.1em;
+  grid-column: 1 / span 2;
+  border-bottom: 1px solid $body-font;
+}
+
+.site-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 10px;
+}
+
+.site-content__images {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 40px;
+  }
+}
+
+// Info-accord styles
+.info-accord {
+  margin-bottom: 30px;
+}
+
+details {
+  overflow: hidden;
+  margin-top: 0.125em;
+  border: 1px solid $body-font;
+  background: #ffffff;
+  color: $body-font;
+  border-radius: 10px;
+
+  summary {
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: .4em;
+    background: $light-gray;
+    outline: none;
+  }
+
+  p {
+    padding: 10px;
+    font-size: 1.1em;
+    color: $link-blue;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary::after {
+  content: '\276F';
+}
+
+details[open] summary {
+  border: none;
+}
+
+details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+// Resources styles
+.resources h3 {
+  background-color: $med-gray;
+  color: #ffffff;
+  padding: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+// .accordion {
+//   background-color: $light-gray;
+//   color: $body-font;
+//   cursor: pointer;
+//   padding: 10px;
+//   width: 100%;
+//   text-align: left;
+//   border: 1px solid $body-font;
+//   border-radius: 10px;
+//   outline: none;
+//   transition: 0.4s;
+// }
+
+// button::after {
+//   content: '\276F';
+// }
+
+// /* Style the accordion panel. Note: hidden by default */
+// .panel {
+//   padding: 0 18px;
+//   background-color: white;
+//   display: none;
+//   overflow: hidden;
+// }
+
+@media screen and (min-width: $sm-break) {
+  // .site-banner {
+  //   grid-template-columns: repeat(3, 1fr);
+
+  //   form {
+  //     display: contents;
+  //   }
+  // }
+
+  .site-banner__left {
+    display: flex;
+    justify-content: space-between;
+    background-color: $byui-blue;
+    width: 11em;
+
+    a {
+      padding-right: 15px;
+      border-right: 1px solid white;
+    }
+
+    h1 {
+      display: contents;
+      font-size: 1.5em;
+    }
+  }
+
+  .site-banner__bottom {
+    display: none;
+  }
+
+  // .mobile-header-icon {
+  //   display: none
+  // }
+}
+
+// header {
+//   background-color: $byui-blue;
+
+//   h1 {
+//     display: none;
+//   }
+
+//   form {
+//     display: none;
+//   }
+// }
+
+// .site-banner {
+//   display: flex;
+//   flex-direction: row;
+// }
+
+// .icon-byui-logo {
+//   background-color: #020202;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 3em;
+//   padding: 10px;
+// }
+
+// .icon-byui-logo,
+// .mobile-header-icon {
+//   color: $light-gray;
+// }
+
+//  .site-banner__left {
+//  }
+// .site-banner__right {
+//   display: flex;
+//   align-items: center;
+// }
