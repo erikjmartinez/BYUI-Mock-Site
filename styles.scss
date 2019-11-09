@@ -117,6 +117,7 @@ header {
   a {
     text-decoration: none;
     color: $link-blue;
+    padding-bottom: 30px;
   }
 
   figure {
@@ -124,7 +125,7 @@ header {
     justify-content: center;
     flex-direction: column;
     border: 1px solid black;
-    width: 25em;
+    max-width: 25em;
     margin: 0 auto;
 
     figcaption {
@@ -138,19 +139,7 @@ header {
         padding-right: 10px;
       }
     }
-
-    // align-items: center;
   }
-
-
-  // display: flex;
-  // flex-direction: column;
-
-  // img {
-  //   margin: 0 auto;
-  //   display: block;
-  //   padding-bottom: 40px;
-  // }
 }
 
 // Info-accord styles
@@ -238,7 +227,16 @@ details[open] summary::after {
   margin-left: 50px;
 }
 
+// Speaker
+.speaker {
+  display: flex;
+  flex-direction: column;
 
+  // margin: 10px;
+  img {
+    margin: 10px;
+  }
+}
 
 
 

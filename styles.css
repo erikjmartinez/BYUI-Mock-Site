@@ -1109,13 +1109,14 @@ header {
 .site-content__images a {
   text-decoration: none;
   color: #0076b6;
+  padding-bottom: 30px;
 }
 .site-content__images figure {
   display: flex;
   justify-content: center;
   flex-direction: column;
   border: 1px solid black;
-  width: 25em;
+  max-width: 25em;
   margin: 0 auto;
 }
 .site-content__images figure figcaption {
@@ -1202,6 +1203,14 @@ details[open] summary::after {
 .dates p a::before {
   content: " ";
   margin-left: 50px;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: column;
+}
+.speaker img {
+  margin: 10px;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
