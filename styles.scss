@@ -231,6 +231,7 @@ details[open] summary::after {
 .speaker {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 
   // margin: 10px;
   img {
