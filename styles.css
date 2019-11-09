@@ -1213,6 +1213,26 @@ details[open] summary::after {
   margin: 10px;
 }
 
+article {
+  padding-bottom: 30px;
+}
+article h2 {
+  font-size: 1.7em;
+  padding-bottom: 10px;
+}
+article h4 {
+  font-size: 1.2em;
+  padding: 10px 0;
+}
+article h4 a {
+  text-decoration: none;
+  color: #0076b6;
+}
+
+.newsroom__list p small strong {
+  font-size: 0.8em;
+}
+
 /* Style the buttons that are used to open and close the accordion panel */
 @media screen and (min-width: 48em) {
   .site-banner__left {

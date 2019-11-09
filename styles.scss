@@ -238,6 +238,30 @@ details[open] summary::after {
   }
 }
 
+// Article/Newroom
+article {
+  padding-bottom: 30px;
+
+  h2 {
+    font-size: 1.7em;
+    padding-bottom: 10px;
+  }
+
+  h4 {
+    font-size: 1.2em;
+    padding: 10px 0;
+
+    a {
+      text-decoration: none;
+      color: $link-blue;
+    }
+  }
+}
+
+.newsroom__list p small strong {
+  font-size: .8em;
+}
+
 
 
 
