@@ -110,14 +110,47 @@ header {
 }
 
 .site-content__images {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: center;
 
-  img {
-    margin: 0 auto;
-    display: block;
-    padding-bottom: 40px;
+  a {
+    text-decoration: none;
+    color: $link-blue;
   }
+
+  figure {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 25em;
+    margin: 0 auto;
+
+    figcaption {
+      background-color: #ffffff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      &::after {
+        content: '\276F';
+        padding-right: 10px;
+      }
+    }
+
+    // align-items: center;
+  }
+
+
+  // display: flex;
+  // flex-direction: column;
+
+  // img {
+  //   margin: 0 auto;
+  //   display: block;
+  //   padding-bottom: 40px;
+  // }
 }
 
 // Info-accord styles
@@ -131,7 +164,7 @@ details {
   border: 1px solid $body-font;
   background: #ffffff;
   color: $body-font;
-  border-radius: 10px;
+  border-radius: 3px;
 
   summary {
     font-size: 1.1em;
@@ -172,11 +205,39 @@ details[open] summary::after {
 }
 
 // Resources styles
-.resources h3 {
-  background-color: $med-gray;
-  color: #ffffff;
-  padding: 12px;
+.resources {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #ffffff;
+  border: 1px solid $body-font;
+  font-size: 1em;
+  border-radius: 3px;
+  margin-bottom: 30px;
+
+
+  h3 {
+    background-color: $light-gray;
+    color: $body-font;
+    padding: 12px;
+    font-size: 1.1em;
+  }
+
+  p {
+    padding: 12px;
+
+    a {
+      text-decoration: none;
+      color: $link-blue;
+    }
+  }
 }
+
+// date
+.dates p a::before {
+  content: ' ';
+  margin-left: 50px;
+}
+
 
 
 
