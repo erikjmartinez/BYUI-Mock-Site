@@ -1103,7 +1103,6 @@ header {
 
 .site-content__images {
   display: grid;
-  grid-template-rows: 1fr;
   justify-content: center;
 }
 .site-content__images a {
@@ -1234,8 +1233,50 @@ article h4 a {
   font-size: 0.8em;
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
 @media screen and (min-width: 48em) {
+  .site-content {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+
+  .site-content__images img {
+    width: 100%;
+  }
+  .site-content__images a:nth-child(1) {
+    grid-column: 1/span 3;
+  }
+  .site-content__images a {
+    padding: 0;
+  }
+  .site-content__images figure {
+    max-width: 10em;
+    justify-content: flex-start;
+  }
+
+  .site-banner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .site-banner form {
+    display: contents;
+  }
+  .site-banner form div {
+    margin-right: 10px;
+    grid-column: 2/span 3;
+    grid-row: 1;
+    text-align: right;
+  }
+  .site-banner form div input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+  .site-banner form div button {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+
   .site-banner__left {
     display: flex;
     justify-content: space-between;
@@ -1254,6 +1295,21 @@ article h4 a {
   .site-banner__bottom {
     display: none;
   }
+
+  .mobile-header-icon {
+    display: none;
+  }
+
+  .resources {
+    grid-column: 2;
+  }
+
+  article {
+    grid-column: 1;
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
+/* Style the buttons that are used to open and close the accordion panel */
 
 /*# sourceMappingURL=styles.css.map */
