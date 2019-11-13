@@ -1180,7 +1180,7 @@ details[open] summary::after {
   display: grid;
   grid-template-columns: 1fr;
   background-color: #ffffff;
-  border: 1px solid #020202;
+  border: 1px solid #b4b3b5;
   font-size: 1em;
   border-radius: 3px;
   margin-bottom: 30px;
@@ -1205,12 +1205,25 @@ details[open] summary::after {
 }
 
 .speaker {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
+  margin-bottom: 30px;
 }
-.speaker img {
-  margin: 10px;
+.speaker h3 {
+  border: 1px solid #b4b3b5;
+  background-color: #eaeaea;
+  font-weight: 600;
+  margin: 0;
+  padding: 12px;
+}
+.speaker .msg-uni {
+  border-left: 1px solid #b4b3b5;
+  border-right: 1px solid #b4b3b5;
+  border-bottom: 1px solid #b4b3b5;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 7px;
+}
+.speaker .msg-uni img {
+  width: 100%;
 }
 
 article {
@@ -1235,11 +1248,14 @@ article h4 a {
 
 @media screen and (min-width: 48em) {
   .site-content {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
     grid-gap: 10px;
   }
 
+  .site-content__images {
+    grid-column: 1/span 2;
+  }
   .site-content__images img {
     width: 100%;
   }
@@ -1300,16 +1316,26 @@ article h4 a {
     display: none;
   }
 
+  .aside-container {
+    grid-column: 3;
+  }
+
   .resources {
-    grid-column: 2;
+    grid-column: 3;
   }
 
   article {
-    grid-column: 1;
+    grid-column: 1/span 2;
     max-width: 80%;
     margin: 0 auto;
   }
 }
-/* Style the buttons that are used to open and close the accordion panel */
+.footer-graphic::before {
+  background: url(http://www.byui.edu/prebuilt/stylenew/images/foot/taylor_graphic.gif) bottom no-repeat;
+  content: "";
+  display: block;
+  height: 146px;
+  padding: 0;
+}
 
 /*# sourceMappingURL=styles.css.map */
