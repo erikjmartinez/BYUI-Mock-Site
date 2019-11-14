@@ -110,16 +110,23 @@ header {
 }
 
 .site-content__images {
-  display: grid;
-  // grid-template-rows: 1fr;
-  justify-content: center;
+  // display: grid;
+  // // grid-template-rows: 1fr;
+  // justify-content: center;
+
+  display: block;
+  margin: 0 5% 5%;
 
   a {
     text-decoration: none;
     color: $link-blue;
     padding-bottom: 30px;
   }
+}
 
+.site-content__images-small {
+  display: grid;
+  margin-top: 20px;
   figure {
     display: flex;
     justify-content: center;
@@ -277,6 +284,85 @@ article {
 }
 
 @media screen and (min-width: $sm-break) {
+  .site-banner {
+    grid-template-columns: repeat(3, 1fr);
+
+    form {
+      display: contents;
+
+      div {
+        margin-right: 10px;
+        grid-column: 2 / span 3;
+        grid-row: 1;
+
+        input {
+          padding: 10px;
+          border-radius: 5px 0 0 5px;
+          border: none;
+          color: $dark-gray;
+        }
+
+        button {
+          padding: 10px;
+          // border-radius: 5px;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .icon-magnifying-glass,
+  .btn-sub,
+  .btn-sign {
+    color: white;
+  }
+
+  .icon-magnifying-glass {
+    background-color: #68ad44;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .btn-sub {
+    background-color: #dc6926;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+
+  .btn-sign {
+    background-color: $body-font;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  .site-banner__left {
+    display: flex;
+    justify-content: space-between;
+    background-color: $byui-blue;
+    width: 11em;
+
+    a {
+      padding-right: 15px;
+      border-right: 1px solid white;
+    }
+
+    h1 {
+      display: contents;
+      font-size: 1.5em;
+    }
+  }
+
+  .site-banner__bottom {
+    display: none;
+  }
+
+  .mobile-header-icon {
+    display: none;
+  }
+
   .site-content {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
@@ -306,56 +392,9 @@ article {
     }
   }
 
-  .site-banner {
-    grid-template-columns: repeat(3, 1fr);
-
-    form {
-      display: contents;
-
-      div {
-        margin-right: 10px;
-        grid-column: 2 / span 3;
-        grid-row: 1;
-        text-align: right;
-
-        input {
-          padding: 5px;
-          border-radius: 5px;
-          border: none;
-        }
-
-        button {
-          padding: 5px;
-          border-radius: 5px;
-          border: none;
-        }
-      }
-    }
-  }
-
-  .site-banner__left {
+  .site-content__images-small {
     display: flex;
     justify-content: space-between;
-    background-color: $byui-blue;
-    width: 11em;
-
-    a {
-      padding-right: 15px;
-      border-right: 1px solid white;
-    }
-
-    h1 {
-      display: contents;
-      font-size: 1.5em;
-    }
-  }
-
-  .site-banner__bottom {
-    display: none;
-  }
-
-  .mobile-header-icon {
-    display: none;
   }
 
   .aside-container {
